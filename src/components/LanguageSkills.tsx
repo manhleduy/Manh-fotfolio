@@ -1,4 +1,3 @@
-import React from 'react'
 import {motion} from 'framer-motion'
 import { languageSkills } from '@/data/skill'
 const LanguageSkills = () => {
