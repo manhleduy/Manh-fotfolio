@@ -52,4 +52,5 @@ với docker là các image đã từng sử dụng
 * các thông tin được sử dụng trong mỗi page ở trong folder data
 * thư viện chart.js cho việc xây dựng các bảng ở trang project
 
-khi pull về chạy bằng npm run dev
+Cách chạy dự án: npm install-> npm run dev
+Link demo trên vercel: https://manh-fotfolio-hkaq.vercel.app
