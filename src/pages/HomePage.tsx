@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Intro from '../components/Intro';
 import { HomePageConfig as defaultConfig, HomePageConfig, presentedIcons } from '../data/home';
 import DynamicBackground from '@/components/DynamicBg';
-import { useNavigate } from 'react-router-dom';
 const HomePage: React.FC = () => {
 
-  const navigate= useNavigate();
+
   useEffect(() => {
     
     function onConfigChange(config: any) {
