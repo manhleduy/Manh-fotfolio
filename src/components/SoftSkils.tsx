@@ -1,7 +1,7 @@
 import React from 'react'
 import type { SoftSkillProps } from '@/data/skill'; 
 import {motion} from 'framer-motion'
-
+import { softSkills } from '@/data/skill';
 
 
 const SoftSkillCard: React.FC<SoftSkillProps> = ({ icon, title, desc, gradient, delay }) => (
@@ -30,11 +30,18 @@ const SoftSkils = () => {
             <p className="text-white/60">Personal attributes that enhance teamwork and leadership</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            <SoftSkillCard icon="💬" title="Communication" desc="Clear & effective verbal and written communication" gradient="from-pink-500/20 to-rose-500/10" delay={0.1}/>
-            <SoftSkillCard icon="🤝" title="Teamwork" desc="Collaborative mindset and cross-functional synergy" gradient="from-blue-500/20 to-cyan-500/10" delay={0.2}/>
-            <SoftSkillCard icon="🧩" title="Problem Solving" desc="Analytical thinking and creative solutions" gradient="from-amber-500/20 to-orange-500/10" delay={0.3}/>
-            <SoftSkillCard icon="⏰" title="Time Management" desc="Prioritization and deadline-driven execution" gradient="from-emerald-500/20 to-green-500/10" delay={0.4}/>
-            <SoftSkillCard icon="🔄" title="Adaptability" desc="Flexible approach to change and new challenges" gradient="from-violet-500/20 to-purple-500/10" delay={0.5}/>
+            {
+              softSkills.map((item:any, index:number)=>(
+                <SoftSkillCard
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                desc={item.desc}
+                gradient={item.gradient}
+                delay={item.delay}
+                />
+              ))
+            }
           </div>
         </section>
   )

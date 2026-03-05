@@ -197,7 +197,11 @@ GROUP BY status;`
   ]
 }
 export const softSkills: SoftSkillProps[] = [
-
+  {icon:"💬", title: "Giao tiếp", desc: "Dể dàng giao tiếp hòa đồng với mọi người", gradient:"from-pink-500/20 to-rose-500/10", delay: 0.1 },
+  {icon:"🤝", title:"Teamwork", desc:"Collaborative mindset and cross-functional synergy", gradient:"from-blue-500/20 to-cyan-500/10", delay:0.2},
+  {icon:"🧩", title:"Problem Solving", desc:"Analytical thinking and creative solutions", gradient:"from-amber-500/20 to-orange-500/10", delay:0.3},
+  {icon:"⏰", title:"Time Management" ,desc:"Prioritization and deadline-driven execution", gradient:"from-emerald-500/20 to-green-500/10", delay:0.4},
+  {icon:"🔄", title:"Adaptability" ,desc:"Flexible approach to change and new challenges", gradient:"from-violet-500/20 to-purple-500/10", delay:0.5}
 ]
 
 export const tools: Tool[] = [
@@ -209,25 +213,25 @@ export const tools: Tool[] = [
       {
         name: 'Commit',
         command: 'git commit -m "message"',
-        description: 'Save changes to repository',
+        description: 'lưu trữ các thay đổi',
         icon: '💾'
       },
       {
         name: 'Push',
         command: 'git push origin main',
-        description: 'Upload commits to remote',
+        description: 'Upload commits',
         icon: '📤'
       },
       {
         name: 'Pull',
         command: 'git pull origin main',
-        description: 'Download latest changes',
+        description: 'tải về các thay đổi gần đây',
         icon: '📥'
       },
       {
         name: 'Merge',
         command: 'git merge feature-branch',
-        description: 'Combine branches together',
+        description: 'kết hợp các nhánh',
         icon: '🔀'
       }
     ]
@@ -266,22 +270,22 @@ export const tools: Tool[] = [
     advantages: [
       {
         title: 'Error Tracking',
-        description: 'Real-time error monitoring and notifications',
+        description: 'theo dõi các lỗi xảy ra',
         icon: '🐛'
       },
       {
         title: 'Performance',
-        description: 'Monitor app performance and bottlenecks',
+        description: 'theo dõi các API request nhằm phát hiện bottlenecks',
         icon: '⚡'
       },
       {
         title: 'Analytics',
-        description: 'Detailed insights into user behavior',
+        description: 'cung cấp chi tiết hành vi người dùng',
         icon: '📊'
       },
       {
         title: 'Integration',
-        description: 'Seamless integration with all frameworks',
+        description: 'dễ dàng integrate vào các dự án',
         icon: '🔗'
       }
     ]
@@ -293,22 +297,22 @@ export const tools: Tool[] = [
     advantages: [
       {
         title: 'Extensions',
-        description: 'Massive library of extensions for productivity',
+        description: 'Có nhiều thư viện khác nhau',
         icon: '🧩'
       },
       {
         title: 'IntelliSense',
-        description: 'Smart code completion and suggestions',
+        description: 'Khả năng gợi ý code thông minh',
         icon: '🧠'
       },
       {
         title: 'Debugging',
-        description: 'Built-in debugging for multiple languages',
+        description: 'Dễ dàng debug',
         icon: '🔍'
       },
       {
         title: 'Lightweight',
-        description: 'Fast and resource-efficient editor',
+        description: 'Phổ biến và dỗ dàng sử dụng',
         icon: '⚙️'
       }
     ]

@@ -130,10 +130,10 @@ const ProjectChart: React.FC<Props> = ({ project }) => {
     <TooltipProvider >
       <Tooltip>
         <TooltipTrigger>
-          <button disabled className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-pink-800 to-purple-900 text-white font-semibold hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-pink-800 to-purple-900 text-white font-semibold hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm">
           <LinkIcon className="w-4 h-4" />
           live demo
-        </button>
+        </div>
         </TooltipTrigger>
         <TooltipContent>
           <p>Coming soon...</p>
