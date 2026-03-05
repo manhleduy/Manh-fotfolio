@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Intro from '../components/Intro';
 import { HomePageConfig as defaultConfig, HomePageConfig, presentedIcons } from '../data/home';
 import DynamicBackground from '@/components/DynamicBg';
+import { useNavigate } from 'react-router-dom';
 const HomePage: React.FC = () => {
+
+  const navigate= useNavigate();
   useEffect(() => {
     
     function onConfigChange(config: any) {
@@ -82,7 +85,7 @@ const HomePage: React.FC = () => {
   const [isready, setIsReady]= useState(true);
 
   return (<>
-  { isready && <Intro onComplete={() => setIsReady(true)} /> } 
+   <Intro onComplete={() => setIsReady(true)} isready={isready} /> 
     <DynamicBackground 
       primaryColor="#3b82f6" // Custom Blue Theme
       particleCount={100}
@@ -119,7 +122,7 @@ const HomePage: React.FC = () => {
           </p>
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10 md:mt-14 content-fade-in stagger-4">
-            <a id="projects-btn" href="#projects" className="btn-projects px-10 py-5 rounded-full text-white font-semibold inter text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3">
+            <a id="projects-btn" href="project" className="btn-projects px-10 py-5 rounded-full text-white font-semibold inter text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="3" y="3" width="7" height="7" rx="1" />
                 <rect x="14" y="3" width="7" height="7" rx="1" />
@@ -128,7 +131,7 @@ const HomePage: React.FC = () => {
               </svg>
               <span id="projects-text">Projects</span>
             </a>
-            <a id="resume-btn" href="#resume" className="btn-resume px-10 py-5 rounded-full text-white font-semibold inter text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3">
+            <a id="resume-btn" href="resume" className="btn-resume px-10 py-5 rounded-full text-white font-semibold inter text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                 <polyline points="14,2 14,8 20,8" />

@@ -4,12 +4,14 @@ interface IntroProps {
   onComplete?: () => void;
   title?: string;
   subtitle?: string;
+  isready?: boolean
 }
 
 const Intro: React.FC<IntroProps> = ({ 
   onComplete, 
   title = "[ PORTFOLIO ]", 
-  subtitle = "INITIALIZING..." 
+  subtitle = "INITIALIZING..." ,
+  isready
 }) => {
   const binaryContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,7 +31,7 @@ const Intro: React.FC<IntroProps> = ({
       line.className = 'binary-line absolute font-mono text-[14px] text-[#00ff88] opacity-0 whitespace-nowrap pointer-events-none';
       
       let binaryText = '';
-      for (let j = 0; j < 80; j++) {
+      for (let j = 0; j < 20; j++) {
         binaryText += generateBinary();
         if (j % 8 === 7) binaryText += ' ';
       }
@@ -49,7 +51,7 @@ const Intro: React.FC<IntroProps> = ({
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0a0a1a] animate-[fadeOutIntro_0.8s_ease-out_4.2s_forwards]">
+    <div className={`fixed inset-0 ${isready?"z-[9999]": "z-0" } flex items-center justify-center bg-[#0a0a1a] animate-[fadeOutIntro_0.8s_ease-out_4.2s_forwards]`}>
       {/* Container for the falling binary characters */}
       <div ref={binaryContainerRef} className="absolute inset-0 w-full h-full overflow-hidden" />
       

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github} from 'lucide-react';
 import { contactData, socialLinks } from '../../data/contact';
 
 interface InfoItemProps {

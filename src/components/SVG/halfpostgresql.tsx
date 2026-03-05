@@ -1,4 +1,3 @@
-import * as React from "react";
 const HalfPostgresql = (props:any) => (
   <svg
     width="264px"

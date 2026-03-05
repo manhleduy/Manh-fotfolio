@@ -1,4 +1,3 @@
-import * as React from "react";
 const HalfMysql = (props:any) => (
   <svg
     width="256px"

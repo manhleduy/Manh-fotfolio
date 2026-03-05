@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 import  technicalSkills, { backendFooter, type Skill }  from '../data/skill';
 import { icons } from '../data/const';
 

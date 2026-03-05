@@ -18,7 +18,6 @@ interface Particle {
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   children,
   primaryColor = '#8b5cf6',
-  accentColor = '#a855f7',
   particleCount = 80,
   showWaves = true,
   interactive = true,

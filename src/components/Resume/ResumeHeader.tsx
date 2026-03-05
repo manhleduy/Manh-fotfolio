@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import type { ResumeConfig } from '../../data/resume';
 import { icons } from '../../data/const';
 
@@ -7,10 +6,7 @@ interface ResumeHeaderProps {
 }
 
 const ResumeHeader: React.FC<ResumeHeaderProps> = ({ config }) => {
-  const initials = useMemo(() => {
-    return config.full_name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
-  }, [config.full_name]);
-
+  
   const headingStyle = {
     fontFamily: `${config.font_family}, Georgia, serif`
   };
