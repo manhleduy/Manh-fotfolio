@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* overall horizontal overflow hidden for mobile */
   font-family: 'Playfair Display', serif; /* global font family */
 }
 
@@ -40,6 +41,8 @@ html, body {
 
 .laurel-container {
   position: relative;
+  /* prevent icons floating outside of the container and causing horizontal scroll */
+  overflow: hidden;
 }
 
 .laurel-icon {

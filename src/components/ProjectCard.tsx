@@ -20,36 +20,63 @@ const TechSection: React.FC<{ title: string; items: Project['frontend'] | Projec
 }
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
-    const {title, description, frontend, backend, database, links, size, tool}= project;
+    const { title, description, frontend, backend, database, links, size, tool, image } = project;
   return (
-    <article className={`project-card bg-card ${size} p-6 md:p-8 rounded-2xl border border-card-border hover:shadow-lg transition-transform transform hover:-translate-y-2`}>
-      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{title}</h3>
-      <p className="text-gray-200 text-base mb-6">{description}</p>
-      
-      <div className='flex flex-col lg:flex-row w-full gap-6'>
-        {/* Tech Stack Section */}
-        <div className="flex-1 min-w-0">
+    <article className={`project-card bg-card ${size} p-6 md:p-8 rounded-2xl border border-card-border hover:shadow-lg transition-transform transform hover:-translate-y-2`}>    
+      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 break-words">{title}</h3>
+      <p className="text-gray-200 text-base mb-6 break-words">{description}</p>
+
+      {/* layout: image (optional) + details + chart; stack vertically on small screens */}
+      <div className="flex flex-col lg:flex-row w-full gap-6">
+        {/* optional screenshot */}
+        {image && (
+          <div className="flex-shrink-0 w-full lg:w-1/3">
+            <img
+              src={image}
+              alt={`${title} screenshot`}
+              className="w-full h-auto rounded-lg object-cover"
+            />
+          </div>
+        )}
+
+        {/* details (tech + links) */}
+        <div className="flex-1 min-w-0 flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TechSection title="Frontend" items={frontend} />
             <TechSection title="Backend" items={backend} />
             <TechSection title="Database" items={database} />
-            {tool && <TechSection title="Tools" items={tool}/>}
+            {tool && <TechSection title="Tools" items={tool} />}
           </div>
-          
+
           {/* Project Links */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-2 mt-6">
             {links?.frontend && (
-              <a href={links.frontend} target="_blank" rel="noreferrer" className="text-accent font-semibold hover:underline text-sm">
+              <a
+                href={links.frontend}
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent font-semibold hover:underline text-sm"
+              >
                 Frontend →
               </a>
             )}
             {links?.backend && (
-              <a href={links.backend} target="_blank" rel="noreferrer" className="text-accent font-semibold hover:underline text-sm">
+              <a
+                href={links.backend}
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent font-semibold hover:underline text-sm"
+              >
                 Backend →
               </a>
             )}
             {links?.github && (
-              <a href={links.github} target="_blank" rel="noreferrer" className="text-accent font-semibold hover:underline text-sm">
+              <a
+                href={links.github}
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent font-semibold hover:underline text-sm"
+              >
                 Source Code →
               </a>
             )}

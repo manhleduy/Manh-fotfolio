@@ -55,7 +55,7 @@ const SkillNode: React.FC<{ skill: Skill; pos: Position; index: number }> = ({ s
           style={{ left: pos.x, top: pos.y, transform: 'translate(-50%, -50%)' }}
         >
           <div 
-            className={`w-[140px] h-[140px] rounded-2xl flex items-center justify-center relative transition-all duration-300 shadow-xl group-hover:scale-110 bg-gradient-to-br ${skill.gradient}`}
+            className={`w-32 h-32 md:w-[140px] md:h-[140px] rounded-2xl flex items-center justify-center relative transition-all duration-300 shadow-xl group-hover:scale-110 bg-gradient-to-br ${skill.gradient}`}
             style={{
               boxShadow: `0 4px 20px rgba(0,0,0,0.3)`
             }}
@@ -81,7 +81,7 @@ const SkillNode: React.FC<{ skill: Skill; pos: Position; index: number }> = ({ s
           </p>
         </div>
       </TooltipTrigger>
-      <TooltipContent className="w-[280px] bg-gradient-to-br from-[#1a2e1a] to-[#0d1f0d] border border-green-400/30 rounded-xl p-4">
+      <TooltipContent className="max-w-[280px] w-auto sm:w-[280px] bg-gradient-to-br from-[#1a2e1a] to-[#0d1f0d] border border-green-400/30 rounded-xl p-4">
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-bold text-lg text-green-400">{skill.name}</h3>
           <span className="text-[10px] px-2 py-1 rounded-full bg-black/40 border border-white/10 text-green-400">

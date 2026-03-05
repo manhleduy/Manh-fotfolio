@@ -18,6 +18,8 @@ import shadcn from "/shadcn.svg"
 import API from "/API.svg"
 import javascript from "/javascript.svg"
 import avatar from "/avatar.jpg"
+import chatAppImage from "/manhChatApp.png"
+import foodieImage from "/manhFoodie.png"
 
 export const icons={
     mysql,
@@ -39,5 +41,7 @@ export const icons={
     shadcn, 
     API,
     javascript,
-    avatar
+    avatar,
+    chatAppImage,
+    foodieImage
 }

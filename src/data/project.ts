@@ -12,6 +12,8 @@ export type Project = {
   id: string
   title: string
   description: string
+  // optional screenshot or illustration for the project; can be a URL or local path
+  image?: string
   frontend: Tech[]
   backend: Tech[]
   database: Tech[]
@@ -34,6 +36,8 @@ export const projects: Project[] = [
     id: 'manh-chat',
     title: 'Manh-Chat',
     description: "Xây dựng một ứng dụng chat thời gian thực với nhắn tin, chia sẻ hình ảnh/tệp, bài viết, bạn bè và nhóm. Các tính năng thời gian thực sử dụng socket; đăng ký qua OTP.",
+    // placeholder; replace with actual screenshot file later
+    image: icons.chatAppImage,
     frontend: [
       { name: 'React', reason: 'Thư viện giao diện người dùng phổ biến cho các ứng dụng dựa trên thành phần', icon: icons.react, snippet: "react-hook-form, react-router-dom, react-hot-toast" },
       { name: 'TypeScript', reason: 'phù hợp cho các dự án lớn', icon: icons.typescript, snippet:"HOC , useDeBouce, useListenSocket" },
@@ -70,6 +74,7 @@ export const projects: Project[] = [
   {
     id: 'manh-foodie',
     title: 'Manh Foodie',
+    image: icons.foodieImage,
     description:
       'Một ứng dụng web PERN-stack để đặt thức ăn, với giỏ hàng và các chỉ số chi tiêu đơn giản. Sử dụng useContext cho trạng thái và Prisma để ánh xạ cơ sở dữ liệu.',
     frontend: [
@@ -86,7 +91,7 @@ export const projects: Project[] = [
     links: {
       frontend: 'https://github.com/manhleduy/ManhFoodie-frontend',
       backend: 'https://github.com/manhleduy/ManhFoodie-backend',
-      livedemo: 'https://github.com/manhleduy/ManhFoodie'
+      livedemo: 'https://manh-foodie-frontend.vercel.app/'
     },
     languages: [
       { name: 'TypeScript', value: 55 },

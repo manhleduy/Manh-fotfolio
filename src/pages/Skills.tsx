@@ -13,10 +13,10 @@ import LanguageSkills from '@/components/LanguageSkills';
 
 const Skills: React.FC = () => {
   return (
-    <div className="min-h-screen mt-20 text-white font-['Playfair_Display',serif] selection:bg-purple-500/40 page-enter"
+    <div className="min-h-screen mt-16 sm:mt-20 text-white font-['Playfair_Display',serif] selection:bg-purple-500/40 page-enter overflow-x-hidden"
          style={{ background: 'radial-gradient(circle farthest-corner at -5.6% -6.8%, rgba(103,49,145,1) 37.3%, rgba(50,0,129,1) 73.5%)' }}>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         
         {/* Hero Title */}
         <header className="text-center mb-24">
