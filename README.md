@@ -51,3 +51,5 @@ với docker là các image đã từng sử dụng
 * các icons trong file public được gộp vào một object trong file const.ts
 * các thông tin được sử dụng trong mỗi page ở trong folder data
 * thư viện chart.js cho việc xây dựng các bảng ở trang project
+
+khi pull về chạy bằng npm run dev
