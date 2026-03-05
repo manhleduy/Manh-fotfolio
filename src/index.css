@@ -42,7 +42,7 @@ html, body {
 .laurel-container {
   position: relative;
   /* prevent icons floating outside of the container and causing horizontal scroll */
-  overflow: hidden;
+
 }
 
 .laurel-icon {

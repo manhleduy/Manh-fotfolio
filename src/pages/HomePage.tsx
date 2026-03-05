@@ -90,13 +90,13 @@ const HomePage: React.FC = () => {
       particleCount={100}
       interactive={true}
     >
-    <div className="hero-container page-enter min-h-screen flex items-center justify-center overflow-auto overflow-x-hidden">
+    <div className="hero-container page-enter min-h-screen flex items-center justify-center overflow-auto">
       <div className="laurel-container px-4 py-3 md:py-0">
         {/* Tech Stack Icons - Rendered from presentedIcons array */}
         {presentedIcons.map((item, index) => (
           <div
             key={index}
-            className={`laurel-icon user-icon laurel-pos-${index} hidden sm:block`}
+            className={`laurel-icon user-icon laurel-pos-${index}`}
           >
             <img
               src={item.icon}
@@ -106,13 +106,13 @@ const HomePage: React.FC = () => {
           </div>
         ))}
         {/* Main Content */}
-        <div className="text-center max-w-4xl mx-auto relative z-10 px-4 sm:px-8 md:px-16 py-8">
+        <div className="text-center max-w-4xl mx-auto relative z-10 px-8 md:px-16 py-8">
           {/* Main Name */}
-          <h1 id="main-name" className="playfair text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white name-glow content-fade-in stagger-1 break-words">
+          <h1 id="main-name" className="playfair text-6xl md:text-8xl lg:text-9xl font-black text-white name-glow content-fade-in stagger-1">
             {HomePageConfig.main_name}
           </h1>
           {/* Subtitle */}
-          <h2 id="job-title" className="inter text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-purple-200 mt-6 md:mt-8 tracking-wide content-fade-in stagger-2 break-words">
+          <h2 id="job-title" className="inter text-2xl md:text-3xl lg:text-4xl font-medium text-purple-200 mt-6 md:mt-8 tracking-wide content-fade-in stagger-2">
             {HomePageConfig.job_title}
           </h2>
           {/* Bio Text */}
@@ -121,7 +121,7 @@ const HomePage: React.FC = () => {
           </p>
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10 md:mt-14 content-fade-in stagger-4">
-            <a id="projects-btn" href="project" className="btn-projects px-6 sm:px-10 py-4 sm:py-5 rounded-full text-white font-semibold inter text-base sm:text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3 w-full sm:w-auto">
+            <a id="projects-btn" href="project" className="btn-projects px-10 py-5 rounded-full text-white font-semibold inter text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="3" y="3" width="7" height="7" rx="1" />
                 <rect x="14" y="3" width="7" height="7" rx="1" />
@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
               </svg>
               <span id="projects-text">Projects</span>
             </a>
-            <a id="resume-btn" href="resume" className="btn-resume px-6 sm:px-10 py-4 sm:py-5 rounded-full text-white font-semibold inter text-base sm:text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3 w-full sm:w-auto">
+            <a id="resume-btn" href="resume" className="btn-resume px-10 py-5 rounded-full text-white font-semibold inter text-lg md:text-xl shadow-lg inline-flex items-center justify-center gap-3">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                 <polyline points="14,2 14,8 20,8" />
