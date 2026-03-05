@@ -1,4 +1,3 @@
-Đây là bài nộp của em dựa trên yêu cầu của công ty
 
 1 HOME PAGE
 có một số hiêu ứng intro và một số background animation
